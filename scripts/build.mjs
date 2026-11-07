@@ -1,0 +1,11 @@
+import { mkdir, rm, cp, readFile, writeFile } from 'node:fs/promises';
+import { render } from '../src/render.js';
+const out = new URL('../dist/', import.meta.url);
+await rm(out, { recursive: true, force: true });
+await mkdir(out, { recursive: true });
+await cp(new URL('../public/', import.meta.url), out, { recursive: true });
+await cp(new URL('../src/styles.css', import.meta.url), new URL('styles.css', out));
+await cp(new URL('../src/main.js', import.meta.url), new URL('main.js', out));
+const tpl = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+await writeFile(new URL('index.html', out), tpl.replace('<!-- CONTENT -->', render()));
+console.log('Built dist/');
