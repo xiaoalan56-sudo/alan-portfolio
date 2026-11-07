@@ -302,11 +302,11 @@ export function render() {
     <div class="c-main">
       <p class="contact-kicker">Have an idea, a research question or a project worth talking about? I reply to every message.</p>
       <button type="button" class="c-email" id="copy-email" data-cursor="Copy"><span class="c-email-text">${esc(me.email)}</span><span class="c-email-line" aria-hidden="true"></span></button>
-      <ul class="socials">${socials.map((x, i) => `<li style="--i:${i}"><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" class="social magnetic" data-cursor="Open"><span class="s-name">${esc(x.name)}</span><span class="s-handle">${esc(x.handle)}</span>${arrow}</a></li>`).join('')}</ul>
+      <ul class="socials">${socials.map((x, i) => `<li style="--i:${i}"><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer" class="social" data-cursor="Open"><span class="s-name">${esc(x.name)}</span><span class="s-handle">${esc(x.handle)}</span>${arrow}</a></li>`).join('')}</ul>
       <div class="contact-actions">
-        ${ext(me.cyfa, `<span>CYFA</span>${arrow}`, 'pill pill-ghost magnetic', 'Visit')}
-        ${ext('https://civory-beta.vercel.app/', `<span>Civory</span>${arrow}`, 'pill pill-ghost magnetic', 'Visit')}
-        ${ext('https://spendleakbeta.vercel.app/', `<span>SpendLeak</span>${arrow}`, 'pill pill-ghost magnetic', 'Visit')}
+        ${ext(me.cyfa, `<span>CYFA</span>${arrow}`, 'pill pill-ghost', 'Visit')}
+        ${ext('https://civory-beta.vercel.app/', `<span>Civory</span>${arrow}`, 'pill pill-ghost', 'Visit')}
+        ${ext('https://spendleakbeta.vercel.app/', `<span>SpendLeak</span>${arrow}`, 'pill pill-ghost', 'Visit')}
       </div>
     </div>
     <div class="c-side">

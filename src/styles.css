@@ -204,7 +204,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
 .rcpt-total strong{font:400 2rem/1 var(--f-serif);color:#1E5A33;font-variant-numeric:tabular-nums}
 .rcpt-bar{height:26px;margin-top:16px;background:repeating-linear-gradient(90deg,#2A332C 0 2px,transparent 2px 4px,#2A332C 4px 5px,transparent 5px 8px,#2A332C 8px 11px,transparent 11px 12px);opacity:.75}
 .rcpt-scan{position:absolute;left:0;right:0;top:0;height:60px;background:linear-gradient(transparent,rgba(62,154,85,.16) 70%,rgba(62,154,85,.7) 98%,transparent);pointer-events:none;opacity:0}
-.rcpt-stamp{position:absolute;right:14px;top:47%;padding:6px 12px;border:2.5px solid #2F7A45;border-radius:6px;color:#2F7A45;font:600 15px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;rotate:-14deg;opacity:0;mix-blend-mode:multiply}
+.rcpt-stamp{position:absolute;right:12px;bottom:24px;padding:6px 12px;border:2.5px solid #2F7A45;border-radius:6px;color:#2F7A45;font:600 15px/1 var(--f-body);letter-spacing:.12em;text-transform:uppercase;rotate:-14deg;opacity:0;mix-blend-mode:multiply}
 .proj-metrics{display:flex;gap:clamp(18px,3vw,40px);margin:0 0 34px;padding-top:22px;border-top:1px solid var(--line)}
 .proj-metrics dt{font:400 clamp(1.5rem,2.2vw,2rem)/1 var(--f-serif);letter-spacing:-.02em}
 .proj-metrics dd{margin:6px 0 0;font-size:13px;color:var(--ink-3)}

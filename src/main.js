@@ -377,7 +377,7 @@ function init() {
   gsap.fromTo('.c-band-track', { xPercent: 0 }, { xPercent: -40, ease: 'none', scrollTrigger: { trigger: '.contact', start: 'top bottom', end: 'bottom bottom', scrub: 1 } });
   gsap.from('.c-email', { yPercent: 60, opacity: 0, duration: 1.4, ease: 'expo.out', scrollTrigger: { trigger: '.c-email', start: 'top 92%' } });
   gsap.from('.c-email-line', { scaleX: 0, duration: 1.6, ease: 'expo.inOut', delay: .3, scrollTrigger: { trigger: '.c-email', start: 'top 92%' } });
-  gsap.from('.contact-actions > *, .c-side', { y: 40, opacity: 0, duration: 1, stagger: .1, ease: 'power3.out', scrollTrigger: { trigger: '.contact-actions', start: 'top 95%' } });
+  gsap.from('.contact-actions > *, .c-side', { y: 30, opacity: 0, duration: 1, stagger: .1, ease: 'power3.out', clearProps: 'transform', scrollTrigger: { trigger: '.contact-actions', start: 'top 95%' } });
   if (fine) {
     const spot = $('.spot'), sec = $('.contact');
     const sx = gsap.quickTo(spot, 'x', { duration: 1, ease: 'power3' }), sy = gsap.quickTo(spot, 'y', { duration: 1, ease: 'power3' });
@@ -423,7 +423,7 @@ function init() {
   gsap.from('.aspire-card', { y: 90, opacity: 0, duration: 1.4, stagger: .15, ease: 'expo.out', scrollTrigger: { trigger: '.aspire-grid', start: 'top 85%' } });
   gsap.from('.beliefs li', { x: 40, opacity: 0, duration: 1, stagger: .1, ease: 'power3.out', scrollTrigger: { trigger: '.beliefs', start: 'top 85%' } });
   gsap.from('.certs li', { y: 24, opacity: 0, duration: .8, stagger: .05, ease: 'power3.out', scrollTrigger: { trigger: '.certs', start: 'top 90%' } });
-  gsap.from('.social', { y: 40, opacity: 0, rotateX: -50, transformPerspective: 600, duration: 1.1, stagger: .07, ease: 'expo.out', scrollTrigger: { trigger: '.socials', start: 'top 92%' } });
+  gsap.from('.social', { y: 30, opacity: 0, duration: 1, stagger: .06, ease: 'expo.out', clearProps: 'transform', scrollTrigger: { trigger: '.socials', start: 'top 92%' } });
   gsap.from('.guest-list li', { x: 30, opacity: 0, duration: .8, stagger: .08, ease: 'power3.out', scrollTrigger: { trigger: '.guest-list', start: 'top 90%' } });
   if (fine) {
     const fchs = $$('.fch').map(el => ({ el, w: 300 }));
