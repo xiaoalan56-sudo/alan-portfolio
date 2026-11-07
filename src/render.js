@@ -42,14 +42,20 @@ const projectVisual = key => {
       <path class="trend" d="M20 200 C70 190 90 150 130 160 S200 110 230 115 S300 50 345 40"/>
     </svg><div class="ticker" aria-hidden="true"><span>CYFA +4.2%</span><span>Team Maple 12,480</span><span>Order filled</span><span>Leaderboard updated</span><span>CYFA +4.2%</span><span>Team Maple 12,480</span><span>Order filled</span><span>Leaderboard updated</span></div></div>`;
   }
-  if (key === 'spendleak') return `<div class="pv pv-spendleak"><img src="/images/spendleak-mark.png" alt="SpendLeak logo" class="pv-sl" loading="lazy"><div class="sl-audit" aria-hidden="true">
-      <div class="sl-head"><span>Invoice audit</span><span class="sl-live">Scanning</span></div>
-      <div class="sl-row flag"><span>Duplicate invoice · INV-2041</span><b>$4,820</b></div>
-      <div class="sl-row flag"><span>Contract price mismatch</span><b>$1,260</b></div>
-      <div class="sl-row flag"><span>Unused software seats</span><b>$940</b></div>
-      <div class="sl-row ok"><span>Freight charges</span><b>Matched</b></div>
-      <div class="sl-total"><span>Recoverable</span><strong data-sl-total>$7,020</strong></div>
-    </div></div>`;
+  if (key === 'spendleak') return `<div class="pv pv-spendleak"><div class="rcpt-wrap"><div class="rcpt" aria-hidden="true">
+      <div class="rcpt-top"><img src="/images/spendleak-mark.png" alt="" class="rcpt-logo"><div><strong>SpendLeak</strong><span>Audit report · #0417</span></div></div>
+      <div class="rcpt-meta"><span>Vendor: Northwind Supply</span><span>Q3 invoices: 142</span></div>
+      <div class="rcpt-rows">
+        <div class="rr flag"><span>Duplicate invoice INV-2041</span><b>$4,820</b><em>Flagged</em></div>
+        <div class="rr flag"><span>Price above contract rate</span><b>$1,260</b><em>Flagged</em></div>
+        <div class="rr flag"><span>Unused software seats ×7</span><b>$940</b><em>Flagged</em></div>
+        <div class="rr ok"><span>Freight charges</span><b>$2,315</b><em>Matched</em></div>
+      </div>
+      <div class="rcpt-total"><span>Recoverable</span><strong data-sl-total>$7,020</strong></div>
+      <div class="rcpt-bar"></div>
+      <div class="rcpt-scan"></div>
+      <div class="rcpt-stamp">Recovered</div>
+    </div></div></div>`;
   return `<div class="pv pv-civory"><div class="civ-rings" aria-hidden="true"><span></span><span></span></div><img src="/images/civory-mark.png" alt="Civory logo" class="pv-civ" loading="lazy"><div class="civ-words" aria-hidden="true"><span>Statutes</span><span>Parliament</span><span>Courts</span><span>Policy</span></div></div>`;
 };
 

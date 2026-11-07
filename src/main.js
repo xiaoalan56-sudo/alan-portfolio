@@ -279,11 +279,18 @@ function init() {
     }
     if (panel.classList.contains('proj-spendleak')) {
       const tot = $('[data-sl-total]', panel), o = { v: 0 };
+      const rc = $('.rcpt', panel);
       gsap.timeline({ scrollTrigger: { trigger: panel, ...st } })
-        .from($('.pv-sl', panel), { y: -40, scale: .6, opacity: 0, duration: 1.4, ease: 'expo.out' })
-        .from($('.sl-audit', panel), { y: 60, opacity: 0, duration: 1.2, ease: 'expo.out' }, .1)
-        .from($$('.sl-row', panel), { x: -30, opacity: 0, duration: .7, stagger: .14, ease: 'power3.out' }, .5)
-        .to(o, { v: 7020, duration: 1.6, ease: 'power2.out', onUpdate: () => tot.textContent = '$' + Math.round(o.v).toLocaleString('en-CA') }, .7);
+        .from($('.rcpt-wrap', panel), { yPercent: 40, rotate: -12, opacity: 0, duration: 1.4, ease: 'expo.out' })
+        .from($$('.rcpt-top, .rcpt-meta', panel), { opacity: 0, y: 10, duration: .5, stagger: .1 }, .3)
+        .fromTo($('.rcpt-scan', panel), { y: -60, opacity: 1 }, { y: () => rc.offsetHeight, duration: 1.8, ease: 'power1.inOut' }, .5)
+        .from($$('.rr', panel), { opacity: 0, x: -14, duration: .45, stagger: .32, ease: 'power2.out' }, .6)
+        .from($$('.rr em', panel), { opacity: 0, duration: .3, stagger: .32 }, .9)
+        .to($('.rcpt-scan', panel), { opacity: 0, duration: .3 }, 2.3)
+        .to(o, { v: 7020, duration: 1.2, ease: 'power2.out', onUpdate: () => tot.textContent = '$' + Math.round(o.v).toLocaleString('en-CA') }, 2)
+        .fromTo($('.rcpt-stamp', panel), { scale: 2.6, opacity: 0 }, { scale: 1, opacity: .9, duration: .45, ease: 'back.out(2.2)' }, 3.1)
+        .fromTo(rc, { x: 0 }, { x: 3, duration: .06, yoyo: true, repeat: 3 }, 3.5);
+      gsap.to($('.rcpt-wrap', panel), { y: -8, rotate: 1, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1 });
     }
     if (panel.classList.contains('proj-cyfa')) {
       gsap.from($('.pv-logo', panel), { scale: .75, opacity: 0, duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: panel, ...st } });
