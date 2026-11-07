@@ -290,7 +290,7 @@ function init() {
         .to(o, { v: 7020, duration: 1.2, ease: 'power2.out', onUpdate: () => tot.textContent = '$' + Math.round(o.v).toLocaleString('en-CA') }, 2)
         .fromTo($('.rcpt-stamp', panel), { scale: 2.6, opacity: 0 }, { scale: 1, opacity: .9, duration: .45, ease: 'back.out(2.2)' }, 3.1)
         .fromTo(rc, { x: 0 }, { x: 3, duration: .06, yoyo: true, repeat: 3 }, 3.5);
-      gsap.to($('.rcpt-wrap', panel), { y: -8, rotate: 1, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1 });
+      gsap.to($('.rcpt-wrap', panel), { y: -6, rotate: innerWidth > 1000 ? 1 : 0, duration: 3.2, ease: 'sine.inOut', yoyo: true, repeat: -1 });
     }
     if (panel.classList.contains('proj-cyfa')) {
       gsap.from($('.pv-logo', panel), { scale: .75, opacity: 0, duration: 1.8, ease: 'expo.out', scrollTrigger: { trigger: panel, ...st } });

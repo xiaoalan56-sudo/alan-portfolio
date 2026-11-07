@@ -451,6 +451,10 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
   .proj{width:auto;height:auto;grid-template-columns:1fr;padding:40px var(--gutter);border-left:0;border-top:1px solid var(--line)}
   .proj-intro{width:auto;padding:110px var(--gutter) 20px;border-top:0}
   .proj-visual{height:min(62vw,420px)}
+  .proj-spendleak .proj-visual{height:auto;padding:34px 0 40px}
+  .pv-spendleak{position:relative;inset:auto}
+  .rcpt{width:min(80vw,320px);font-size:11.5px;padding:18px 18px 26px}
+  .rcpt-wrap{rotate:-1deg}
   .proj-count,.hint{display:none}
   .r-pin{height:auto}
   .r-ghost{display:none}
@@ -510,3 +514,8 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;paddin
   .work{position:relative;top:auto}
 }
 .rc-img,.rp-img,.work-img{max-width:none}
+/* logos always fit their box */
+.work-brand img,.work-brand.is-tile img,.work-brand.is-white img,.work-brand.is-light img,.work-brand.is-tile img[src*='vp-mock']{position:absolute;inset:14%;width:72%;height:72%;max-width:none;max-height:none;object-fit:contain;border-radius:0;box-shadow:none}
+.work-brand.is-tile img[src*='vp-mock'],.work-brand.is-tile img[src*='jx-law']{filter:drop-shadow(0 24px 30px rgba(0,0,0,.55))}
+.work-brand.is-white img{inset:10%;width:80%;height:80%}
+.work-logo img{position:absolute;inset:14%;width:72%;height:72%;max-width:none;object-fit:contain}
